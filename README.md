@@ -67,6 +67,7 @@ expense-tracker list
 ```
 
 Filter by category:
+
 ```
 expense-tracker list --category "Food"
 ```
@@ -74,12 +75,14 @@ expense-tracker list --category "Food"
 ### Viewing summaries
 
 Overall summary:
+
 ```
 expense-tracker summary
 # Total expenses: $30.00
 ```
 
 Monthly summary:
+
 ```
 expense-tracker summary --month 8
 # Total expenses for August: $20.00

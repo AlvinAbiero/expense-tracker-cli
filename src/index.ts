@@ -1,7 +1,14 @@
 #!/usr/bin/env node
 
 import { program } from "commander";
-import { add, update, deleteExpense, list, summary } from "./commands";
+import {
+  add,
+  update,
+  deleteExpense,
+  list,
+  summary,
+  setBudgetCommand,
+} from "./commands";
 import { initializeDataStore } from "./dataStore";
 
 // initialize data store when application starts
@@ -24,6 +31,13 @@ program
     new Date().toISOString().split("T")[0]
   )
   .action(add);
+
+program
+  .command("set-budget")
+  .description("Set a budget for a specific month")
+  .requiredOption("--month <month>", "Month to set budget for (1-12)")
+  .requiredOption("--amount <amount>", "Budget amount")
+  .action(setBudgetCommand);
 
 program
   .command("update")

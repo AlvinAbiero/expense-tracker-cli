@@ -3,3 +3,4 @@ export { update } from "./update";
 export { deleteExpense } from "./delete";
 export { list } from "./list";
 export { summary } from "./summary";
+export { setBudgetCommand } from "./budget";
